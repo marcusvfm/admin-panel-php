@@ -1,0 +1,6 @@
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteBase /bravo-administrator
+    RewriteRule ^(.+)\/?$ $1 [R,L]
+	RewriteRule ^categories\/([0-9A-z_-]+)$ categories.php?c=$1 [QSA,L,NC]
